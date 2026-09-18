@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Walid | AI Engineer & Computer Vision Specialist</title>
+  <meta name="description" content="Portfolio of Mohamed Walid - AI Engineer specializing in Machine Learning, Deep Learning, Computer Vision, PyTorch, YOLOv8, and Medical AI." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background Particle Network -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Mohamed<span class="highlight">.AI</span></span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#ai-sandbox" class="nav-link highlight-link">AI Visualizer</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="assets/Mohamed_Walid_CV.pdf" download="Mohamed_Walid_CV.pdf" class="btn btn-primary btn-sm">
+          <span>CV</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Available for AI Roles & Freelance</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Mohamed Walid</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero-description">
+          Computer Science Senior (Artificial Intelligence Major) passionate about building real-world AI systems, high-accuracy Computer Vision pipelines, YOLOv8 object detection, and deep neural networks.
+        </p>
+
+        <!-- Tech Pills -->
+        <div class="tech-pills">
+          <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/> Python</span>
+          <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"/> PyTorch</span>
+          <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"/> TensorFlow</span>
+          <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV"/> OpenCV</span>
+          <span class="pill">⚡ YOLOv8</span>
+          <span class="pill">🔍 OCR</span>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-gradient btn-lg">
+            <span>Explore AI Projects</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#ai-sandbox" class="btn btn-outline btn-lg">
+            <span>Try AI Demos</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://github.com/mooowalid" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/mohamedwalidd" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:mohamedwalid847@gmail.com" class="social-btn" title="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="tel:01011887635" class="social-btn" title="Call">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Photo Avatar -->
+      <div class="hero-avatar-wrapper">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring"></div>
+        <div class="avatar-card">
+          <img src="assets/profile.jpg" alt="Mohamed Walid - AI Engineer" class="avatar-img" />
+          <div class="avatar-badge">
+            <span class="badge-icon">🧠</span>
+            <div class="badge-text">
+              <span class="badge-title">AI & CV Specialist</span>
+              <span class="badge-sub">PyTorch & YOLOv8</span>
+            </div>
+          </div>
+          <div class="avatar-stats">
+            <div class="stat-item">
+              <span class="stat-value">3.4</span>
+              <span class="stat-label">GPA</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">Top 5</span>
+              <span class="stat-label">DeepX '26</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">3+</span>
+              <span class="stat-label">AI Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Info Highlights Banner -->
+  <section class="highlights-banner">
+    <div class="container highlights-grid">
+      <div class="highlight-card">
+        <div class="hl-icon">🎓</div>
+        <div class="hl-content">
+          <h4>B.Sc. Artificial Intelligence</h4>
+          <p>Misr University for Science & Technology (2022–2026)</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-icon">🏆</div>
+        <div class="hl-content">
+          <h4>DeepX 2026 Finalist</h4>
+          <p>Top 5 AI Engineers Hackathon Recognition</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-icon">📜</div>
+        <div class="hl-content">
+          <h4>IBM Track (DEPI)</h4>
+          <p>Data Science & Machine Learning Specialist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Education Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">// BIOGRAPHY</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Combining analytical rigor with deep learning models to build high-impact AI solutions.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-card">
+          <h3 class="card-title">Professional Summary</h3>
+          <p class="text-body">
+            Junior AI Engineer and Computer Science senior specializing in Artificial Intelligence. Experienced in building end-to-end intelligent pipelines—from computer vision ROI detection and optical character recognition (OCR) to multi-modal medical diagnostics and real-time CCTV security systems.
+          </p>
+          <p class="text-body">
+            Extensive hands-on expertise with Python frameworks including <strong>PyTorch, TensorFlow, Scikit-learn, OpenCV, and YOLOv8</strong>. Proven ability to reduce model false positives, curate custom datasets (5,000+ images), and communicate complex technical concepts effectively.
+          </p>
+
+          <div class="info-table">
+            <div class="info-row">
+              <span class="info-label">Location:</span>
+              <span class="info-value">Old Cairo / Giza, Egypt</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Degree:</span>
+              <span class="info-value">B.Sc. in Computer Science (Major AI)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">University:</span>
+              <span class="info-value">Misr University for Science and Technology</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">GPA:</span>
+              <span class="info-value highlight-text">3.4 / 4.0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Achievements & Certifications -->
+        <div class="glass-card certs-card">
+          <h3 class="card-title">Certifications & Honors</h3>
+          <ul class="cert-list">
+            <li class="cert-item">
+              <div class="cert-icon">🥇</div>
+              <div>
+                <h4>DeepX 2026 Hackathon</h4>
+                <p>Top 5 Finalist — AI Innovation & Neural Architecture Design</p>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon">🏢</div>
+              <div>
+                <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
+                <p>MCIT Intensive Data Science & IBM Track Certification</p>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon">🗣️</div>
+              <div>
+                <h4>Arab Institute for Advanced Technology</h4>
+                <p>Official Technical Presenter & Speaker</p>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon">🛡️</div>
+              <div>
+                <h4>GIG Egypt (Gulf Insurance Group)</h4>
+                <p>Corporate Training & Tech Certification</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section id="skills" class="section bg-alt">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">// TECH STACK</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Core frameworks, algorithms, and domain expertise.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Deep Learning & ML -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">🧠</span>
+            <h3>Deep Learning & ML</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>PyTorch & TensorFlow</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>CNNs, RNN, LSTM, GRU</span><span>88%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>Scikit-Learn (Classification / Regression)</span><span>92%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>Feature Engineering & Evaluation</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Computer Vision & OCR -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">👁️</span>
+            <h3>Computer Vision & OCR</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>YOLOv8 Object Detection</span><span>95%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>OpenCV & Image Preprocessing</span><span>92%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>OCR & Text Extraction</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>Face Recognition & ROI Detection</span><span>87%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 87%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Science & Analytics -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">📊</span>
+            <h3>Data Science & Tools</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>Python, Pandas, NumPy</span><span>95%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>EDA & Matplotlib Visualization</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>Dataset Curation & Augmentation</span><span>88%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-info"><span>Git, GitHub & Jupyter</span><span>92%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">✨</span>
+            <h3>Soft Skills & Leadership</h3>
+          </div>
+          <div class="soft-tags">
+            <span class="tag">Problem Solving & Analytical Thinking</span>
+            <span class="tag">Technical Communication</span>
+            <span class="tag">Teamwork & Collaboration</span>
+            <span class="tag">Time Management</span>
+            <span class="tag">Model Architecture Presentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">// PORTFOLIO SHOWCASE</span>
+        <h2 class="section-title">Featured <span class="gradient-text">AI Projects</span></h2>
+        <p class="section-subtitle">Real-world intelligent systems built with PyTorch, YOLOv8, OpenCV, and NLP APIs.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision & OCR</button>
+        <button class="filter-btn" data-filter="medical">Healthcare & Medical AI</button>
+        <button class="filter-btn" data-filter="security">CCTV & Threat AI</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="glass-card project-card" data-category="medical">
+          <div class="project-image-box">
+            <img src="assets/patient-ai.jpg" alt="Patient Medical History System" class="project-img" />
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-1">View Project Details</button>
+            </div>
+            <span class="project-badge">Graduation Project</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tech-tags">
+              <span>Medical AI</span>
+              <span>NLP API</span>
+              <span>Biometrics</span>
+              <span>PyTorch</span>
+            </div>
+            <h3 class="project-title">Patient Medical History System with Fingerprint Identification</h3>
+            <p class="project-desc">
+              Smart healthcare platform with biometric authentication, diagnostic AI for bone fracture, brain tumor, stroke & pneumonia detection, plus an NLP prescription simplifier.
+            </p>
+            <div class="project-footer">
+              <button class="btn-link open-modal-btn" data-modal="modal-1">Read Deep Dive &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card" data-category="cv">
+          <div class="project-image-box">
+            <img src="assets/id-ocr.jpg" alt="Automated National ID Data Extraction" class="project-img" />
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-2">View Project Details</button>
+            </div>
+            <span class="project-badge">Computer Vision & OCR</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tech-tags">
+              <span>YOLOv8</span>
+              <span>OpenCV</span>
+              <span>OCR</span>
+              <span>Excel Export</span>
+            </div>
+            <h3 class="project-title">Automated Egyptian National ID Data Extraction System</h3>
+            <p class="project-desc">
+              End-to-end CV pipeline utilizing YOLOv8 for region-of-interest (ROI) detection on National IDs, isolating fields and converting images into structured data.
+            </p>
+            <div class="project-footer">
+              <button class="btn-link open-modal-btn" data-modal="modal-2">Read Deep Dive &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card" data-category="security cv">
+          <div class="project-image-box">
+            <img src="assets/cctv-ai.jpg" alt="Multi-Model CCTV AI System" class="project-img" />
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-3">View Project Details</button>
+            </div>
+            <span class="project-badge">Real-Time CCTV Security</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tech-tags">
+              <span>Dual YOLOv8</span>
+              <span>Real-Time Alert</span>
+              <span>5K+ Dataset</span>
+            </div>
+            <h3 class="project-title">Multi-Model AI System for Real-Time Threat Detection & Compliance</h3>
+            <p class="project-desc">
+              Smart CCTV monitoring pipeline integrating twin YOLOv8 models for face mask compliance & weapon/violence detection, reducing false positives by 15%.
+            </p>
+            <div class="project-footer">
+              <button class="btn-link open-modal-btn" data-modal="modal-3">Read Deep Dive &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Visualizer Sandbox Widget -->
+  <section id="ai-sandbox" class="section bg-alt">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">// INTERACTIVE DEMONSTRATOR</span>
+        <h2 class="section-title">Live AI Model <span class="gradient-text">Visualizer</span></h2>
+        <p class="section-subtitle">Simulate real-time Computer Vision bounding box detection and OCR field extraction right in your browser!</p>
+      </div>
+
+      <div class="glass-card sandbox-container">
+        <!-- Sandbox Tabs -->
+        <div class="sandbox-tabs">
+          <button class="sandbox-tab active" data-demo="id-demo">🆔 National ID OCR Extractor</button>
+          <button class="sandbox-tab" data-demo="medical-demo">🩺 Medical Diagnostic Scanner</button>
+          <button class="sandbox-tab" data-demo="cctv-demo">📹 CCTV Weapon & Mask Monitor</button>
+        </div>
+
+        <!-- Demo Viewport -->
+        <div class="sandbox-viewport">
+          
+          <!-- Demo 1: ID OCR -->
+          <div class="demo-panel active" id="id-demo">
+            <div class="demo-split">
+              <div class="demo-visual">
+                <img src="assets/id-ocr.jpg" alt="ID OCR Preview" class="demo-img" />
+                <div class="bbox bbox-id-1"><span class="bbox-label">ROI: Name (Conf 98.4%)</span></div>
+                <div class="bbox bbox-id-2"><span class="bbox-label">ROI: National ID (Conf 99.1%)</span></div>
+                <div class="scan-line"></div>
+              </div>
+              <div class="demo-sidebar">
+                <h4>YOLOv8 + OCR Field Extractor</h4>
+                <div class="demo-metrics">
+                  <div class="metric-box"><span>Processing Time</span><strong>42 ms</strong></div>
+                  <div class="metric-box"><span>ROI Confidence</span><strong>98.7%</strong></div>
+                </div>
+                <div class="extracted-data-card">
+                  <h5>Extracted Structured Data:</h5>
+                  <ul>
+                    <li><strong>Full Name:</strong> MOHAMED WALID AHMED</li>
+                    <li><strong>National ID:</strong> 30209181234567</li>
+                    <li><strong>Governorate:</strong> Old Cairo, Egypt</li>
+                    <li><strong>Export Status:</strong> <span class="badge-success">Ready for Excel</span></li>
+                  </ul>
+                </div>
+                <button class="btn btn-gradient btn-block re-scan-btn">⚡ Run Model Scan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 2: Medical Scanner -->
+          <div class="demo-panel" id="medical-demo">
+            <div class="demo-split">
+              <div class="demo-visual">
+                <img src="assets/patient-ai.jpg" alt="Medical Scan Preview" class="demo-img" />
+                <div class="bbox bbox-med-1"><span class="bbox-label">Pneumonia Positive (94%)</span></div>
+                <div class="bbox bbox-med-2"><span class="bbox-label">ROI: Fracture (97.2%)</span></div>
+                <div class="scan-line"></div>
+              </div>
+              <div class="demo-sidebar">
+                <h4>Multi-Model Healthcare Diagnostic AI</h4>
+                <div class="demo-metrics">
+                  <div class="metric-box"><span>Models Loaded</span><strong>4 Neural Nets</strong></div>
+                  <div class="metric-box"><span>Avg Accuracy</span><strong>96.8%</strong></div>
+                </div>
+                <div class="extracted-data-card">
+                  <h5>AI Diagnostic Analysis:</h5>
+                  <ul>
+                    <li><strong>Chest X-Ray:</strong> Pneumonia indicators detected</li>
+                    <li><strong>Brain MRI:</strong> No stroke/tumor anomalies</li>
+                    <li><strong>Biometric Check:</strong> Fingerprint Verified ✓</li>
+                    <li><strong>NLP Simplifier:</strong> "Prescription summarized for patient"</li>
+                  </ul>
+                </div>
+                <button class="btn btn-gradient btn-block re-scan-btn">⚡ Re-analyze Scan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 3: CCTV Monitor -->
+          <div class="demo-panel" id="cctv-demo">
+            <div class="demo-split">
+              <div class="demo-visual">
+                <img src="assets/cctv-ai.jpg" alt="CCTV Monitor Preview" class="demo-img" />
+                <div class="bbox bbox-cctv-green"><span class="bbox-label">Face Mask Verified ✓</span></div>
+                <div class="bbox bbox-cctv-red"><span class="bbox-label">ALERT: Smartphone (Threat False Positive Filtered)</span></div>
+                <div class="scan-line"></div>
+              </div>
+              <div class="demo-sidebar">
+                <h4>Dual YOLOv8 Threat & Compliance Pipeline</h4>
+                <div class="demo-metrics">
+                  <div class="metric-box"><span>FPS Speed</span><strong>60 FPS</strong></div>
+                  <div class="metric-box"><span>FP Reduction</span><strong>-15%</strong></div>
+                </div>
+                <div class="extracted-data-card">
+                  <h5>Live CCTV Stream Status:</h5>
+                  <ul>
+                    <li><strong>Mask Compliance:</strong> 100% Compliant</li>
+                    <li><strong>Weapon Alert:</strong> Clear (Smartphone Distinguish Active)</li>
+                    <li><strong>Curated Dataset:</strong> 5,000+ images trained</li>
+                    <li><strong>Alert System:</strong> <span class="badge-success">Normal Monitor</span></li>
+                  </ul>
+                </div>
+                <button class="btn btn-gradient btn-block re-scan-btn">⚡ Simulate Threat Check</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Timeline Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">// CAREER PATHWAY</span>
+        <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+        <p class="section-subtitle">Academic background, data science internships, and competition achievements.</p>
+      </div>
+
+      <div class="timeline">
+        
+        <!-- Experience Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">11/2024 – 05/2025</span>
+            <h3>Data Science Intern (IBM Track)</h3>
+            <h4 class="timeline-org">Digital Egypt Pioneers Initiative (DEPI) – MCIT</h4>
+            <ul>
+              <li>Completed intensive Data Science training under the IBM Track program.</li>
+              <li>Applied machine learning techniques on real-world datasets: preprocessing, feature engineering, and model validation.</li>
+              <li>Built and evaluated classification models using Scikit-learn, Pandas, NumPy, and Matplotlib.</li>
+              <li>Performed exploratory data analysis (EDA) and interactive data visualizations.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Machine Learning</span><span>Scikit-learn</span><span>Pandas</span><span>EDA</span><span>IBM Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2026</span>
+            <h3>DeepX 2026 Hackathon — Top 5 Finalist</h3>
+            <h4 class="timeline-org">DeepX AI Hackathon</h4>
+            <ul>
+              <li>Competed among top engineering teams developing high-performance neural network solutions under tight time constraints.</li>
+              <li>Engineered custom computer vision & deep learning models achieving top 5 ranking overall.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Deep Learning</span><span>Hackathon Finalist</span><span>Neural Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Item -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">09/2022 – 06/2026</span>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <h4 class="timeline-org">Misr University for Science and Technology | Major: Artificial Intelligence</h4>
+            <p><strong>GPA: 3.4 / 4.0</strong> — Giza, Egypt</p>
+            <p>Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, Pattern Recognition, Natural Language Processing, Biometric Systems, Data Structures & Algorithms.</p>
+            <div class="timeline-tags">
+              <span>Artificial Intelligence</span><span>GPA 3.4</span><span>Computer Vision</span><span>Graduation Project</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-alt">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">// GET IN TOUCH</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Interested in collaborating on an AI project or hiring for AI / Data Science roles?</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-wrapper">
+          <div class="glass-card contact-info-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email Address</h4>
+              <a href="mailto:mohamedwalid847@gmail.com">mohamedwalid847@gmail.com</a>
+            </div>
+          </div>
+          <div class="glass-card contact-info-card">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>Phone Number</h4>
+              <a href="tel:01011887635">01011887635</a>
+            </div>
+          </div>
+          <div class="glass-card contact-info-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Old Cairo / Giza, Egypt</p>
+            </div>
+          </div>
+          <div class="glass-card contact-info-card">
+            <div class="contact-icon">🔗</div>
+            <div>
+              <h4>Profiles</h4>
+              <div class="social-pills">
+                <a href="https://linkedin.com/in/mohamedwalidd" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+                <a href="https://github.com/mooowalid" target="_blank" rel="noopener">GitHub &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card contact-form-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="e.g. Sarah Ahmed" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" required placeholder="sarah@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" required placeholder="AI Engineer Opportunity / Project Inquiry" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-gradient btn-block">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+          <div id="form-toast" class="form-toast">
+            <span>✓ Message sent successfully! Mohamed will get back to you soon.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 <strong>Mohamed Walid</strong>. All rights reserved. Crafted for high-impact Artificial Intelligence.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modals -->
+
+  <!-- Modal 1 -->
+  <div class="modal" id="modal-1">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass-card">
+      <button class="modal-close">&times;</button>
+      <div class="modal-body">
+        <span class="project-badge">Graduation Project</span>
+        <h3>Patient Medical History System with Fingerprint Identification</h3>
+        <img src="assets/patient-ai.jpg" alt="Patient AI System" class="modal-img" />
+        
+        <h4>Project Overview & Key Features</h4>
+        <p>Developed a smart healthcare platform designed for managing patient electronic health records (EHR) integrated with biometric fingerprint authentication to prevent identity mismatch in hospitals.</p>
+        
+        <ul>
+          <li><strong>Multi-Model Image Analysis:</strong> Integrated specialized deep learning models to diagnose bone fractures, brain tumors, stroke markers, and pneumonia from medical X-Rays and MRI scans.</li>
+          <li><strong>NLP Medical Simplifier API:</strong> Built a custom Natural Language Processing pipeline that simplifies complex medical terminology in doctor prescriptions and lab reports for patient comprehension.</li>
+          <li><strong>Scalable Web Architecture:</strong> Doctors and specialists can seamlessly access patient history, review AI diagnostic predictions, and update records in real-time.</li>
+        </ul>
+
+        <div class="modal-tags">
+          <span>PyTorch</span><span>Medical Imaging</span><span>Fingerprint Biometrics</span><span>NLP API</span><span>Healthcare AI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal" id="modal-2">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass-card">
+      <button class="modal-close">&times;</button>
+      <div class="modal-body">
+        <span class="project-badge">Computer Vision & OCR Pipeline</span>
+        <h3>Automated Egyptian National ID Data Extraction System</h3>
+        <img src="assets/id-ocr.jpg" alt="National ID OCR System" class="modal-img" />
+        
+        <h4>Project Overview & Key Features</h4>
+        <p>Designed an end-to-end computer vision system to automate data entry from Egyptian National Identity Cards, eliminating manual typing errors and saving administrative processing time.</p>
+        
+        <ul>
+          <li><strong>YOLOv8 ROI Detection:</strong> Fine-tuned a YOLOv8 object detection model to isolate specific regions of interest (ROI) such as Name, National ID number, address, and expiration date regardless of orientation or lighting.</li>
+          <li><strong>Advanced OCR Integration:</strong> Applied image preprocessing (grayscale, adaptive thresholding, deskewing) and OCR engine pipelines to extract Arabic and numeral text.</li>
+          <li><strong>Structured Excel Output:</strong> Automated conversion of extracted card data directly into structured database formats and Excel spreadsheets.</li>
+        </ul>
+
+        <div class="modal-tags">
+          <span>YOLOv8</span><span>OpenCV</span><span>OCR Engine</span><span>Python</span><span>Data Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal" id="modal-3">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass-card">
+      <button class="modal-close">&times;</button>
+      <div class="modal-body">
+        <span class="project-badge">CCTV Security & Computer Vision</span>
+        <h3>Multi-Model AI System for Real-Time Threat Detection & Compliance</h3>
+        <img src="assets/cctv-ai.jpg" alt="CCTV AI Threat Monitor" class="modal-img" />
+        
+        <h4>Project Overview & Key Features</h4>
+        <p>Engineered a smart CCTV surveillance pipeline capable of monitoring safety compliance and detecting lethal threats in real time across high-security facilities.</p>
+        
+        <ul>
+          <li><strong>Dual YOLOv8 Model Pipeline:</strong> Implemented a multi-model pipeline running simultaneously to detect face mask compliance and dangerous object/weapon hazards.</li>
+          <li><strong>Rule-Based Violence Flagging:</strong> Designed a prioritized alert mechanism that flags lethal objects and triggers high-severity alerts for security operators.</li>
+          <li><strong>False Positive Reduction (-15%):</strong> Curated and annotated a custom dataset of 5,000+ images to train the model to accurately distinguish non-threatening handheld items (smartphones) from weapons.</li>
+        </ul>
+
+        <div class="modal-tags">
+          <span>Dual YOLOv8</span><span>Real-Time Processing</span><span>CCTV Computer Vision</span><span>Dataset Curation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
