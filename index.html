@@ -31,7 +31,6 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#ai-sandbox" class="nav-link highlight-link">AI Visualizer</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
@@ -85,10 +84,6 @@
           <a href="#projects" class="btn btn-gradient btn-lg">
             <span>Explore AI Projects</span>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="#ai-sandbox" class="btn btn-outline btn-lg">
-            <span>Try AI Demos</span>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </a>
         </div>
 
@@ -450,118 +445,6 @@
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive AI Visualizer Sandbox Widget -->
-  <section id="ai-sandbox" class="section bg-alt">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">// INTERACTIVE DEMONSTRATOR</span>
-        <h2 class="section-title">Live AI Model <span class="gradient-text">Visualizer</span></h2>
-        <p class="section-subtitle">Simulate real-time Computer Vision bounding box detection and OCR field extraction right in your browser!</p>
-      </div>
-
-      <div class="glass-card sandbox-container">
-        <!-- Sandbox Tabs -->
-        <div class="sandbox-tabs">
-          <button class="sandbox-tab active" data-demo="id-demo">🆔 National ID OCR Extractor</button>
-          <button class="sandbox-tab" data-demo="medical-demo">🩺 Medical Diagnostic Scanner</button>
-          <button class="sandbox-tab" data-demo="cctv-demo">📹 CCTV Weapon & Mask Monitor</button>
-        </div>
-
-        <!-- Demo Viewport -->
-        <div class="sandbox-viewport">
-          
-          <!-- Demo 1: ID OCR -->
-          <div class="demo-panel active" id="id-demo">
-            <div class="demo-split">
-              <div class="demo-visual">
-                <img src="assets/id-ocr.jpg" alt="ID OCR Preview" class="demo-img" />
-                <div class="bbox bbox-id-1"><span class="bbox-label">ROI: Name (Conf 98.4%)</span></div>
-                <div class="bbox bbox-id-2"><span class="bbox-label">ROI: National ID (Conf 99.1%)</span></div>
-                <div class="scan-line"></div>
-              </div>
-              <div class="demo-sidebar">
-                <h4>YOLOv8 + OCR Field Extractor</h4>
-                <div class="demo-metrics">
-                  <div class="metric-box"><span>Processing Time</span><strong>42 ms</strong></div>
-                  <div class="metric-box"><span>ROI Confidence</span><strong>98.7%</strong></div>
-                </div>
-                <div class="extracted-data-card">
-                  <h5>Extracted Structured Data:</h5>
-                  <ul>
-                    <li><strong>Full Name:</strong> MOHAMED WALID AHMED</li>
-                    <li><strong>National ID:</strong> 30209181234567</li>
-                    <li><strong>Governorate:</strong> Old Cairo, Egypt</li>
-                    <li><strong>Export Status:</strong> <span class="badge-success">Ready for Excel</span></li>
-                  </ul>
-                </div>
-                <button class="btn btn-gradient btn-block re-scan-btn">⚡ Run Model Scan</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Demo 2: Medical Scanner -->
-          <div class="demo-panel" id="medical-demo">
-            <div class="demo-split">
-              <div class="demo-visual">
-                <img src="assets/patient-ai.jpg" alt="Medical Scan Preview" class="demo-img" />
-                <div class="bbox bbox-med-1"><span class="bbox-label">Pneumonia Positive (94%)</span></div>
-                <div class="bbox bbox-med-2"><span class="bbox-label">ROI: Fracture (97.2%)</span></div>
-                <div class="scan-line"></div>
-              </div>
-              <div class="demo-sidebar">
-                <h4>Multi-Model Healthcare Diagnostic AI</h4>
-                <div class="demo-metrics">
-                  <div class="metric-box"><span>Models Loaded</span><strong>4 Neural Nets</strong></div>
-                  <div class="metric-box"><span>Avg Accuracy</span><strong>96.8%</strong></div>
-                </div>
-                <div class="extracted-data-card">
-                  <h5>AI Diagnostic Analysis:</h5>
-                  <ul>
-                    <li><strong>Chest X-Ray:</strong> Pneumonia indicators detected</li>
-                    <li><strong>Brain MRI:</strong> No stroke/tumor anomalies</li>
-                    <li><strong>Biometric Check:</strong> Fingerprint Verified ✓</li>
-                    <li><strong>NLP Simplifier:</strong> "Prescription summarized for patient"</li>
-                  </ul>
-                </div>
-                <button class="btn btn-gradient btn-block re-scan-btn">⚡ Re-analyze Scan</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Demo 3: CCTV Monitor -->
-          <div class="demo-panel" id="cctv-demo">
-            <div class="demo-split">
-              <div class="demo-visual">
-                <img src="assets/cctv-ai.jpg" alt="CCTV Monitor Preview" class="demo-img" />
-                <div class="bbox bbox-cctv-green"><span class="bbox-label">Face Mask Verified ✓</span></div>
-                <div class="bbox bbox-cctv-red"><span class="bbox-label">ALERT: Smartphone (Threat False Positive Filtered)</span></div>
-                <div class="scan-line"></div>
-              </div>
-              <div class="demo-sidebar">
-                <h4>Dual YOLOv8 Threat & Compliance Pipeline</h4>
-                <div class="demo-metrics">
-                  <div class="metric-box"><span>FPS Speed</span><strong>60 FPS</strong></div>
-                  <div class="metric-box"><span>FP Reduction</span><strong>-15%</strong></div>
-                </div>
-                <div class="extracted-data-card">
-                  <h5>Live CCTV Stream Status:</h5>
-                  <ul>
-                    <li><strong>Mask Compliance:</strong> 100% Compliant</li>
-                    <li><strong>Weapon Alert:</strong> Clear (Smartphone Distinguish Active)</li>
-                    <li><strong>Curated Dataset:</strong> 5,000+ images trained</li>
-                    <li><strong>Alert System:</strong> <span class="badge-success">Normal Monitor</span></li>
-                  </ul>
-                </div>
-                <button class="btn btn-gradient btn-block re-scan-btn">⚡ Simulate Threat Check</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </div>
   </section>

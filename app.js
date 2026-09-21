@@ -164,36 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 6. AI Sandbox Visualizer Tabs & Scanner Logic ---
-  const sandboxTabs = document.querySelectorAll('.sandbox-tab');
-  const demoPanels = document.querySelectorAll('.demo-panel');
-
-  sandboxTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      sandboxTabs.forEach(t => t.classList.remove('active'));
-      demoPanels.forEach(p => p.classList.remove('active'));
-
-      tab.classList.add('active');
-      const demoId = tab.getAttribute('data-demo');
-      const targetPanel = document.getElementById(demoId);
-      if (targetPanel) targetPanel.classList.add('active');
-    });
-  });
-
-  // Rescan simulation button
-  document.querySelectorAll('.re-scan-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const panel = e.target.closest('.demo-panel');
-      const scanLine = panel.querySelector('.scan-line');
-      if (scanLine) {
-        scanLine.style.animation = 'none';
-        void scanLine.offsetWidth; // Trigger reflow
-        scanLine.style.animation = 'scan 1.5s ease-in-out';
-      }
-    });
-  });
-
-  // --- 7. Modals Logic ---
+  // --- 6. Modals Logic ---
   const modalOpenBtns = document.querySelectorAll('.open-modal-btn');
   const modalCloseBtns = document.querySelectorAll('.modal-close, .modal-backdrop');
 
